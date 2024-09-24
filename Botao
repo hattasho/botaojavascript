@@ -1,0 +1,31 @@
+document.body.style.display = 'flex';
+document.body.style.justifyContent = 'center';
+document.body.style.alignItems = 'center';
+document.body.style.height = '100vh'; 
+document.body.style.margin = '0';  
+
+let meuFormulario = document.createElement('div');
+meuFormulario.style.width = '300px';
+meuFormulario.style.height = '100px';
+meuFormulario.style.display = 'flex';
+meuFormulario.style.flexDirection = 'column';
+meuFormulario.style.alignItems = 'center';
+meuFormulario.style.justifyContent = 'center';
+
+let campoTexto = document.createElement('input');
+campoTexto.type = 'text';
+campoTexto.size = 20;
+
+let botao = document.createElement('button');
+botao.textContent = 'CONFIRMAR';
+
+botao.addEventListener('click', function() {
+    let texto = campoTexto.value;  
+    alert ("Texto enviado: " + texto);
+    campoTexto.value = ''; 
+});
+
+meuFormulario.appendChild(campoTexto);
+meuFormulario.appendChild(botao);
+
+document.body.appendChild(meuFormulario);
